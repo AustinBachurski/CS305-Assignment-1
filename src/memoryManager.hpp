@@ -20,6 +20,7 @@ public:
         failure,
     };
 
+    [[nodiscard("Allocation may throw.")]]
     AllocationResult allocate(Job const& job);
     void displayMemoryState(uint8_t const currentTime);
     void updateState(uint8_t const currentTime);

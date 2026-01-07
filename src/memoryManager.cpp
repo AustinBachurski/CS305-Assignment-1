@@ -13,7 +13,6 @@ MemoryManager::MemoryManager(AllocatorCallable allocator)
 : allocator{ allocator }
 { }
 
-[[nodiscard("Allocation may fail.")]]
 MemoryManager::AllocationResult MemoryManager::allocate(Job const& job)
 {
     try
