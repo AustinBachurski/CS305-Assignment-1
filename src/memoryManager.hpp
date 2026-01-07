@@ -26,7 +26,7 @@ public:
     void updateState(uint8_t const currentTime);
 
 private:
-    AllocatorCallable allocator;
+    AllocatorCallable allocatorCallable;
     std::array<Job, 20> memory{};
 
 };

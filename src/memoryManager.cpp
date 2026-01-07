@@ -2,29 +2,29 @@
 #include "job.hpp"
 
 #include <cstdint>
-#include <functional>
 #include <new>
 #include <print>
 #include <ranges>
-#include <span>
 
 
 MemoryManager::MemoryManager(AllocatorCallable allocator)
-: allocator{ allocator }
+: allocatorCallable{ allocator }
 { }
 
 MemoryManager::AllocationResult MemoryManager::allocate(Job const& job)
 {
     try
     {
-        for (auto const i : std::views::iota(0uz, allocator(memory, job.memorySize)))
+        std::size_t index{ allocatorCallable(memory, job.memorySize) };
+
+        for (auto const i : std::views::iota(0uz, index))
         {
             memory[i] = job;
         }
 
         return AllocationResult::success;
     }
-    catch (std::bad_alloc)
+    catch (std::bad_alloc&)
     {
         return AllocationResult::failure;
     }
