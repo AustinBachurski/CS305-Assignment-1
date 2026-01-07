@@ -17,7 +17,7 @@ MemoryManager::AllocationResult MemoryManager::allocate(Job const& job)
     {
         std::size_t index{ allocatorCallable(memory, job.memorySize) };
 
-        for (auto const i : std::views::iota(0uz, index))
+        for (auto const i : std::views::iota(0uz, index + 1))
         {
             memory[i] = job;
         }
