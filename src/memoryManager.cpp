@@ -3,6 +3,7 @@
 
 #include <cstdint>
 #include <functional>
+#include <new>
 #include <print>
 #include <ranges>
 #include <span>
@@ -12,10 +13,22 @@ MemoryManager::MemoryManager(AllocatorCallable allocator)
 : allocator{ allocator }
 { }
 
-void MemoryManager::allocate(Job const& job)
+[[nodiscard("Allocation may fail.")]]
+MemoryManager::AllocationResult MemoryManager::allocate(Job const& job)
 {
-    std::size_t index{ allocator(memory, job.memorySize) };
-    std::println("{}", index);
+    try
+    {
+        for (auto const i : std::views::iota(0uz, allocator(memory, job.memorySize)))
+        {
+            memory[i] = job;
+        }
+
+        return AllocationResult::success;
+    }
+    catch (std::bad_alloc)
+    {
+        return AllocationResult::failure;
+    }
 }
 
 void MemoryManager::displayMemoryState(uint8_t const currentTime)
