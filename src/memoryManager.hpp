@@ -12,10 +12,15 @@ class MemoryManager
 {
 public:
     using AllocatorCallable = std::function<std::size_t(std::span<Job const, 20>, uint8_t const)>;
-    MemoryManager(AllocatorCallable allocator);
+    explicit MemoryManager(AllocatorCallable allocator);
 
+    enum class AllocationResult : uint8_t
+    {
+        success,
+        failure,
+    };
 
-    void allocate(Job const& job);
+    AllocationResult allocate(Job const& job);
     void displayMemoryState(uint8_t const currentTime);
     void updateState(uint8_t const currentTime);
 
