@@ -3,35 +3,37 @@
 
 #include <cstdint>
 #include <format>
-#include <span>
 
 
-namespace MemoryManager
+class MemoryManager
 {
+public:
+    enum class JobState : uint8_t
+    {
+        end,
+        waiting,
+        running,
+        sleeping,
+    };
 
-enum class JobState : uint8_t
-{
-    end,
-    waiting,
-    running,
-    sleeping,
+    struct Page
+    {
+        std::size_t allocatedIndex{};
+        uint8_t jobID{};
+        uint8_t startTime{};
+        uint8_t runTime{};
+        JobState currentState{};
+        JobState endState{};
+    };
+
+    void allocate(std::size_t const index, Page const& page);
+    void displayMemoryState(uint8_t const currentTime);
+    void updateState(uint8_t const currentTime);
+
+private:
+    std::array<MemoryManager::Page, 20> memory{};
+
 };
-
-struct Page
-{
-    std::size_t allocatedIndex{};
-    uint8_t jobID{};
-    uint8_t startTime{};
-    uint8_t runTime{};
-    JobState currentState{};
-    JobState endState{};
-};
-
-void allocate(std::span<Page, 20> memory, std::size_t const index, Page const& page);
-void displayMemoryState(std::span<Page const, 20> memory, uint8_t const currentTime);
-void updateState(std::span<Page, 20> memory, uint8_t const currentTime);
-
-} // namespace MemoryManager
 
 template<>
 struct std::formatter<MemoryManager::JobState>

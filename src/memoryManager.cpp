@@ -2,17 +2,14 @@
 
 #include <print>
 #include <ranges>
-#include <span>
 
-namespace MemoryManager
-{
 
-void allocate(std::span<Page, 20> memory, std::size_t const index, Page const& page)
+void MemoryManager::allocate(std::size_t const index, Page const& page)
 {
     memory[index] = page;
 }
 
-void displayMemoryState(std::span<Page const, 20> memory, uint8_t const currentTime)
+void MemoryManager::displayMemoryState(uint8_t const currentTime)
 {
     std::println("***********************************************************");
     std::println("*             MEMORY STATE AT TIMEPOINT {:<2}                *", currentTime);
@@ -45,7 +42,7 @@ void displayMemoryState(std::span<Page const, 20> memory, uint8_t const currentT
     std::println();
 }
 
-void updateState(std::span<Page, 20> memory, uint8_t const currentTime)
+void MemoryManager::updateState(uint8_t const currentTime)
 {
     for (auto& page : memory)
     {
@@ -64,4 +61,3 @@ void updateState(std::span<Page, 20> memory, uint8_t const currentTime)
     }
 }
 
-} // namespace MemoryManager
