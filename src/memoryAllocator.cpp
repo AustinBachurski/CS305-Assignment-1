@@ -3,6 +3,7 @@
 
 #include <cstdint>
 #include <new>
+#include <ranges>
 #include <span>
 
 
@@ -18,6 +19,28 @@ std::size_t firstFit(std::span<MemoryManager::Page const, 20> memory, uint8_t co
 {
     std::size_t index{};
     uint8_t spanSize{};
+
+    for (auto const [i, page] : std::views::enumerate(memory))
+    {
+        if (!page.jobID)    // At a free space.
+        {
+            if (!spanSize)  // Not currently traversing free space.
+            {
+                index = i;
+            }
+
+            ++spanSize;
+
+            if (requestedSize == spanSize)
+            {
+                return index;
+            }
+        }
+        else
+        {
+            spanSize = 0;
+        }
+    }
 
     throw std::bad_alloc();
 }
