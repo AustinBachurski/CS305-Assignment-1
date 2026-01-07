@@ -8,8 +8,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-add_subdirectory(src)
-
 add_compile_options(
     -Werror
     -Wall
@@ -33,3 +31,6 @@ add_compile_options(
     -Wunused
     -Wuseless-cast
 )
+
+add_subdirectory(src)
+
