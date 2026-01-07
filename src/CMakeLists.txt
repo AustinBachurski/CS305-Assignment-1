@@ -4,6 +4,7 @@ add_executable(assignment1)
 
 target_sources(assignment1 PRIVATE
     main.cpp
+    memoryManager.cpp
 )
 
 target_compile_options(assignment1 PRIVATE
