@@ -1,4 +1,5 @@
 #include "memoryManager.hpp"
+#include "job.hpp"
 
 #include <cstdint>
 #include <functional>
@@ -7,9 +8,13 @@
 #include <span>
 
 
-void MemoryManager::allocate(Page const& page, AllocatorCallable allocator)
+MemoryManager::MemoryManager(AllocatorCallable allocator)
+: allocator{ allocator }
+{ }
+
+void MemoryManager::allocate(Job const& job)
 {
-    std::size_t index{ allocator(memory, page.memorySize) };
+    std::size_t index{ allocator(memory, job.memorySize) };
     std::println("{}", index);
 }
 

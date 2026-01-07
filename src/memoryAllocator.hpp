@@ -1,16 +1,22 @@
 #ifndef MEMORY_ALLOCATOR_HPP
 #define MEMORY_ALLOCATOR_HPP
 
-#include "memoryManager.hpp"
+#include "job.hpp"
 
 #include <span>
+
 
 namespace Allocator
 {
 
-std::size_t bestFit(std::span<MemoryManager::Page const, 20> memory, uint8_t const requestedSize);
-std::size_t firstFit(std::span<MemoryManager::Page const, 20> memory, uint8_t const requestedSize);
-std::size_t worstFit(std::span<MemoryManager::Page const, 20> memory, uint8_t const requestedSize);
+/// Best-Fit memory allocation algorithm.
+std::size_t bestFit(std::span<Job const, 20> memory, uint8_t const requestedSize);
+
+/// First-Fit memory allocation algorithm.
+std::size_t firstFit(std::span<Job const, 20> memory, uint8_t const requestedSize);
+
+/// Worst-Fit memory allocation algorithm.
+std::size_t worstFit(std::span<Job const, 20> memory, uint8_t const requestedSize);
 
 }  // namespace Allocator
 

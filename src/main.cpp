@@ -1,16 +1,17 @@
 #include "memoryAllocator.hpp"
 #include "memoryManager.hpp"
+#include "job.hpp"
 
 #include <cstdint>
 
 
 int main()
 {
-    MemoryManager memory;
+    MemoryManager memory(Allocator::firstFit);
 
-    MemoryManager::Page page{1, 2, 1, 7, MemoryManager::JobState::running, MemoryManager::JobState::sleeping};
+    Job page{1, 2, 1, 7, JobState::running, JobState::sleeping};
 
-    memory.allocate(page, Allocator::firstFit);
+    memory.allocate(page);
     return 0;
 
     uint8_t currentTime = 0u;

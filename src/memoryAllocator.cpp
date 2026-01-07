@@ -1,5 +1,5 @@
 #include "memoryAllocator.hpp"
-#include "memoryManager.hpp"
+#include "job.hpp"
 
 #include <cstdint>
 #include <new>
@@ -10,12 +10,12 @@
 namespace Allocator
 {
 
-std::size_t bestFit(std::span<MemoryManager::Page const, 20> memory, uint8_t const requestedSize)
+std::size_t bestFit(std::span<Job const, 20> memory, uint8_t const requestedSize)
 {
     throw std::bad_alloc();
 }
 
-std::size_t firstFit(std::span<MemoryManager::Page const, 20> memory, uint8_t const requestedSize)
+std::size_t firstFit(std::span<Job const, 20> memory, uint8_t const requestedSize)
 {
     std::size_t index{};
     uint8_t spanSize{};
@@ -45,7 +45,7 @@ std::size_t firstFit(std::span<MemoryManager::Page const, 20> memory, uint8_t co
     throw std::bad_alloc();
 }
 
-std::size_t worstFit(std::span<MemoryManager::Page const, 20> memory, uint8_t const requestedSize)
+std::size_t worstFit(std::span<Job const, 20> memory, uint8_t const requestedSize)
 {
     throw std::bad_alloc();
 }
