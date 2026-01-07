@@ -26,7 +26,7 @@ std::size_t firstFit(std::span<Job const, 20> memory, uint8_t const requestedSiz
         {
             if (!spanSize)  // Not currently traversing free space.
             {
-                index = i;
+                index = static_cast<std::size_t>(i);
             }
 
             ++spanSize;
