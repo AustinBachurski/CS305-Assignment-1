@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 4.0)
 add_executable(assignment1)
 
 target_sources(assignment1 PRIVATE
+    memoryDemo.cpp
     main.cpp
     memoryAllocator.cpp
     memoryManager.cpp
