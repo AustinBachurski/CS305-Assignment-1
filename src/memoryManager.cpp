@@ -48,13 +48,9 @@ void MemoryManager::displayMemoryState(uint8_t const currentTime)
         {
             std::println("{}{}", page, std::string(page.runTime - currentTime, '.'));
         }
-        else if (page.currentState == JobState::sleeping)
-        {
-            std::println("{}", page);
-        }
         else
         {
-            std::println("{} <- Shouldn't be here!", page);
+            std::println("{}", page);
         }
     }
 
@@ -78,6 +74,22 @@ void MemoryManager::updateState(uint8_t const currentTime)
             {
                 page.currentState = page.endState;
             }
+        }
+        else if (page.currentState == JobState::end)
+        {
+            deallocate(page.jobID);
+        }
+    }
+}
+
+
+void MemoryManager::deallocate(uint8_t const jobNumber)
+{
+    for (auto& page : memory)
+    {
+        if (jobNumber == page.jobID)
+        {
+            page = {};
         }
     }
 }

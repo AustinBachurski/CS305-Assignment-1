@@ -11,7 +11,7 @@ void demo(std::function<std::size_t(std::span<Job const, 20>, uint8_t const)> al
 {
     MemoryManager memory(allocator);
 
-    Job page{1, 2, 1, 7, JobState::running, JobState::sleeping};
+    Job page{1, 2, 1, 7, JobState::running, JobState::end};
 
     if (memory.allocate(page) == MemoryManager::AllocationResult::failure)
     {

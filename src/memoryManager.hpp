@@ -28,6 +28,7 @@ public:
 private:
     AllocatorCallable allocatorCallable;
     std::array<Job, 20> memory{};
+    void deallocate(uint8_t const jobNumber);
 
 };
 
