@@ -10,10 +10,10 @@
 namespace Allocator
 {
 
-std::size_t bestFit(std::span<Job const, 20> memory, uint8_t const requestedSize)
-{
-    throw std::bad_alloc();
-}
+//std::size_t bestFit(std::span<Job const, 20> memory, uint8_t const requestedSize)
+//{
+//    throw std::bad_alloc();
+//}
 
 std::size_t firstFit(std::span<Job const, 20> memory, uint8_t const requestedSize)
 {
@@ -45,10 +45,10 @@ std::size_t firstFit(std::span<Job const, 20> memory, uint8_t const requestedSiz
     throw std::bad_alloc();
 }
 
-std::size_t worstFit(std::span<Job const, 20> memory, uint8_t const requestedSize)
-{
-    throw std::bad_alloc();
-}
+//std::size_t worstFit(std::span<Job const, 20> memory, uint8_t const [[maybe_unused]]requestedSize)
+//{
+//    throw std::bad_alloc();
+//}
 
 }  // namespace Allocator
 
