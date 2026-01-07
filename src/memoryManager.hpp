@@ -3,6 +3,8 @@
 
 #include <cstdint>
 #include <format>
+#include <functional>
+#include <span>
 
 
 class MemoryManager
@@ -18,15 +20,17 @@ public:
 
     struct Page
     {
-        std::size_t allocatedIndex{};
         uint8_t jobID{};
+        uint8_t memorySize{};
         uint8_t startTime{};
         uint8_t runTime{};
         JobState currentState{};
         JobState endState{};
     };
 
-    void allocate(std::size_t const index, Page const& page);
+    using AllocatorCallable = std::function<std::size_t(std::span<Page const, 20>, uint8_t const)>;
+
+    void allocate(Page const& page, AllocatorCallable allocator);
     void displayMemoryState(uint8_t const currentTime);
     void updateState(uint8_t const currentTime);
 

@@ -1,12 +1,16 @@
 #include "memoryManager.hpp"
 
+#include <cstdint>
+#include <functional>
 #include <print>
 #include <ranges>
+#include <span>
 
 
-void MemoryManager::allocate(std::size_t const index, Page const& page)
+void MemoryManager::allocate(Page const& page, AllocatorCallable allocator)
 {
-    memory[index] = page;
+    std::size_t index{ allocator(memory, page.memorySize) };
+    std::println("{}", index);
 }
 
 void MemoryManager::displayMemoryState(uint8_t const currentTime)
