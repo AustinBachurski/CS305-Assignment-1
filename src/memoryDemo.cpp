@@ -117,22 +117,21 @@ void demo(std::function<std::size_t(std::span<Job const, 20>, uint8_t const)> al
 
     std::deque<Job> jobs = getJobsFromFile("data/inputData.csv");
 
-    /*
-    Job page{1, 2, 1, 7, JobState::running, JobState::end};
+    uint8_t currentTime = 0;
 
-    if (memory.allocate(page) == MemoryManager::AllocationResult::failure)
-    {
-        std::println("allocation failed!");
-    }
-
-    uint8_t currentTime = 0u;
-
-    while(currentTime < 10u)
+    while(true)
     {
         memory.updateState(currentTime);
         memory.displayMemoryState(currentTime);
         ++currentTime;
+        memory.displayStaged(currentTime, jobs);
+        memory.performStagedActions(currentTime, jobs);
+
+        if (jobs.empty() || memory.allSleeping())
+        {
+            std::println("Nothing more to do...\n");
+            return;
+        }
     }
-    */
 }
 

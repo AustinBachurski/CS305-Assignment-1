@@ -4,6 +4,7 @@
 #include "job.hpp"
 
 #include <cstdint>
+#include <deque>
 #include <functional>
 #include <span>
 
@@ -22,8 +23,11 @@ public:
 
     [[nodiscard("Allocation may throw.")]]
     AllocationResult allocate(Job const& job);
+    bool allSleeping();
     void displayMemoryState(uint8_t const currentTime);
+    void displayStaged(uint8_t const currentTime, std::deque<Job> const& jobs);
     void updateState(uint8_t const currentTime);
+    void performStagedActions(uint8_t const currentTime, std::deque<Job>& jobs);
 
 private:
     AllocatorCallable allocatorCallable;

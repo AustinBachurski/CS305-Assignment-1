@@ -10,7 +10,7 @@ enum class JobState : uint8_t
     end,
     queued,
     running,
-    waiting,
+    blocked,
     sleeping,
 };
 
@@ -45,8 +45,8 @@ struct std::formatter<JobState>
             case JobState::running:
                 return std::format_to(context.out(), "Running");
 
-            case JobState::waiting:
-                return std::format_to(context.out(), "Waiting");
+            case JobState::blocked:
+                return std::format_to(context.out(), "Blocked");
 
             case JobState::sleeping:
                 return std::format_to(context.out(), "Sleeping");
