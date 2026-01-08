@@ -10,8 +10,8 @@ void demo(std::function<std::size_t(std::span<Job const, 20>, uint8_t const)> al
 
 int main()
 {
-    demo(Allocator::firstFit);
+    //demo(Allocator::firstFit);
     //demo(Allocator::bestFit);
-    //demo(Allocator::worstFit);
+    demo(Allocator::worstFit);
 }
 
