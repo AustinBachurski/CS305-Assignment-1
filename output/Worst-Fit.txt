@@ -1,0 +1,1070 @@
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 0                 *
+***********************************************************
+  Page  0 -> 
+  Page  1 -> 
+  Page  2 -> 
+  Page  3 -> 
+  Page  4 -> 
+  Page  5 -> 
+  Page  6 -> 
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> 
+  Page 10 -> 
+  Page 11 -> 
+  Page 12 -> 
+  Page 13 -> 
+  Page 14 -> 
+  Page 15 -> 
+  Page 16 -> 
+  Page 17 -> 
+  Page 18 -> 
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 1 - Queued: requesting 2 pages for 7 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 1                 *
+***********************************************************
+  Page  0 -> Job 1 - Running.......
+  Page  1 -> Job 1 - Running.......
+  Page  2 -> 
+  Page  3 -> 
+  Page  4 -> 
+  Page  5 -> 
+  Page  6 -> 
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> 
+  Page 10 -> 
+  Page 11 -> 
+  Page 12 -> 
+  Page 13 -> 
+  Page 14 -> 
+  Page 15 -> 
+  Page 16 -> 
+  Page 17 -> 
+  Page 18 -> 
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 2 - Queued: requesting 3 pages for 8 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 2                 *
+***********************************************************
+  Page  0 -> Job 1 - Running......
+  Page  1 -> Job 1 - Running......
+  Page  2 -> Job 2 - Running........
+  Page  3 -> Job 2 - Running........
+  Page  4 -> Job 2 - Running........
+  Page  5 -> 
+  Page  6 -> 
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> 
+  Page 10 -> 
+  Page 11 -> 
+  Page 12 -> 
+  Page 13 -> 
+  Page 14 -> 
+  Page 15 -> 
+  Page 16 -> 
+  Page 17 -> 
+  Page 18 -> 
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 3 - Queued: requesting 4 pages for 6 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 3                 *
+***********************************************************
+  Page  0 -> Job 1 - Running.....
+  Page  1 -> Job 1 - Running.....
+  Page  2 -> Job 2 - Running.......
+  Page  3 -> Job 2 - Running.......
+  Page  4 -> Job 2 - Running.......
+  Page  5 -> Job 3 - Running......
+  Page  6 -> Job 3 - Running......
+  Page  7 -> Job 3 - Running......
+  Page  8 -> Job 3 - Running......
+  Page  9 -> 
+  Page 10 -> 
+  Page 11 -> 
+  Page 12 -> 
+  Page 13 -> 
+  Page 14 -> 
+  Page 15 -> 
+  Page 16 -> 
+  Page 17 -> 
+  Page 18 -> 
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 4 - Queued: requesting 3 pages for 6 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 4                 *
+***********************************************************
+  Page  0 -> Job 1 - Running....
+  Page  1 -> Job 1 - Running....
+  Page  2 -> Job 2 - Running......
+  Page  3 -> Job 2 - Running......
+  Page  4 -> Job 2 - Running......
+  Page  5 -> Job 3 - Running.....
+  Page  6 -> Job 3 - Running.....
+  Page  7 -> Job 3 - Running.....
+  Page  8 -> Job 3 - Running.....
+  Page  9 -> Job 4 - Running......
+  Page 10 -> Job 4 - Running......
+  Page 11 -> Job 4 - Running......
+  Page 12 -> 
+  Page 13 -> 
+  Page 14 -> 
+  Page 15 -> 
+  Page 16 -> 
+  Page 17 -> 
+  Page 18 -> 
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 5 - Queued: requesting 2 pages for 9 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 5                 *
+***********************************************************
+  Page  0 -> Job 1 - Running...
+  Page  1 -> Job 1 - Running...
+  Page  2 -> Job 2 - Running.....
+  Page  3 -> Job 2 - Running.....
+  Page  4 -> Job 2 - Running.....
+  Page  5 -> Job 3 - Running....
+  Page  6 -> Job 3 - Running....
+  Page  7 -> Job 3 - Running....
+  Page  8 -> Job 3 - Running....
+  Page  9 -> Job 4 - Running.....
+  Page 10 -> Job 4 - Running.....
+  Page 11 -> Job 4 - Running.....
+  Page 12 -> Job 5 - Running.........
+  Page 13 -> Job 5 - Running.........
+  Page 14 -> 
+  Page 15 -> 
+  Page 16 -> 
+  Page 17 -> 
+  Page 18 -> 
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 6 - Queued: requesting 3 pages for 6 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 6                 *
+***********************************************************
+  Page  0 -> Job 1 - Running..
+  Page  1 -> Job 1 - Running..
+  Page  2 -> Job 2 - Running....
+  Page  3 -> Job 2 - Running....
+  Page  4 -> Job 2 - Running....
+  Page  5 -> Job 3 - Running...
+  Page  6 -> Job 3 - Running...
+  Page  7 -> Job 3 - Running...
+  Page  8 -> Job 3 - Running...
+  Page  9 -> Job 4 - Running....
+  Page 10 -> Job 4 - Running....
+  Page 11 -> Job 4 - Running....
+  Page 12 -> Job 5 - Running........
+  Page 13 -> Job 5 - Running........
+  Page 14 -> Job 6 - Running......
+  Page 15 -> Job 6 - Running......
+  Page 16 -> Job 6 - Running......
+  Page 17 -> 
+  Page 18 -> 
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 7 - Queued: requesting 2 pages for 6 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 7                 *
+***********************************************************
+  Page  0 -> Job 1 - Running.
+  Page  1 -> Job 1 - Running.
+  Page  2 -> Job 2 - Running...
+  Page  3 -> Job 2 - Running...
+  Page  4 -> Job 2 - Running...
+  Page  5 -> Job 3 - Running..
+  Page  6 -> Job 3 - Running..
+  Page  7 -> Job 3 - Running..
+  Page  8 -> Job 3 - Running..
+  Page  9 -> Job 4 - Running...
+  Page 10 -> Job 4 - Running...
+  Page 11 -> Job 4 - Running...
+  Page 12 -> Job 5 - Running.......
+  Page 13 -> Job 5 - Running.......
+  Page 14 -> Job 6 - Running.....
+  Page 15 -> Job 6 - Running.....
+  Page 16 -> Job 6 - Running.....
+  Page 17 -> Job 7 - Running......
+  Page 18 -> Job 7 - Running......
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Queued: requesting 3 pages for 4 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 8                 *
+***********************************************************
+  Page  0 -> Job 1 - End
+  Page  1 -> Job 1 - End
+  Page  2 -> Job 2 - Running..
+  Page  3 -> Job 2 - Running..
+  Page  4 -> Job 2 - Running..
+  Page  5 -> Job 3 - Running.
+  Page  6 -> Job 3 - Running.
+  Page  7 -> Job 3 - Running.
+  Page  8 -> Job 3 - Running.
+  Page  9 -> Job 4 - Running..
+  Page 10 -> Job 4 - Running..
+  Page 11 -> Job 4 - Running..
+  Page 12 -> Job 5 - Running......
+  Page 13 -> Job 5 - Running......
+  Page 14 -> Job 6 - Running....
+  Page 15 -> Job 6 - Running....
+  Page 16 -> Job 6 - Running....
+  Page 17 -> Job 7 - Running.....
+  Page 18 -> Job 7 - Running.....
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Deallocate Job 1, freeing 2 pages.
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Queued: requesting 5 pages for 5 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 9                 *
+***********************************************************
+  Page  0 -> 
+  Page  1 -> 
+  Page  2 -> Job 2 - Running.
+  Page  3 -> Job 2 - Running.
+  Page  4 -> Job 2 - Running.
+  Page  5 -> Job 3 - End
+  Page  6 -> Job 3 - End
+  Page  7 -> Job 3 - End
+  Page  8 -> Job 3 - End
+  Page  9 -> Job 4 - Running.
+  Page 10 -> Job 4 - Running.
+  Page 11 -> Job 4 - Running.
+  Page 12 -> Job 5 - Running.....
+  Page 13 -> Job 5 - Running.....
+  Page 14 -> Job 6 - Running...
+  Page 15 -> Job 6 - Running...
+  Page 16 -> Job 6 - Running...
+  Page 17 -> Job 7 - Running....
+  Page 18 -> Job 7 - Running....
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Deallocate Job 3, freeing 4 pages.
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 10 - Queued: requesting 2 pages for 8 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 10                *
+***********************************************************
+  Page  0 -> 
+  Page  1 -> 
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Running........
+  Page  6 -> Job 10 - Running........
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Running....
+  Page 13 -> Job 5 - Running....
+  Page 14 -> Job 6 - Running..
+  Page 15 -> Job 6 - Running..
+  Page 16 -> Job 6 - Running..
+  Page 17 -> Job 7 - Running...
+  Page 18 -> Job 7 - Running...
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Queued: requesting 4 pages for 6 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 11                *
+***********************************************************
+  Page  0 -> 
+  Page  1 -> 
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Running.......
+  Page  6 -> Job 10 - Running.......
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Running...
+  Page 13 -> Job 5 - Running...
+  Page 14 -> Job 6 - Running.
+  Page 15 -> Job 6 - Running.
+  Page 16 -> Job 6 - Running.
+  Page 17 -> Job 7 - Running..
+  Page 18 -> Job 7 - Running..
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Queued: requesting 6 pages for 5 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 12                *
+***********************************************************
+  Page  0 -> 
+  Page  1 -> 
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Running......
+  Page  6 -> Job 10 - Running......
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Running..
+  Page 13 -> Job 5 - Running..
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 7 - Running.
+  Page 18 -> Job 7 - Running.
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Queued: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Queued: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Queued: requesting 5 pages for 3 seconds.
+  - Allocate Job 7 - Queued: requesting 2 pages for 3 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 13                *
+***********************************************************
+  Page  0 -> Job 7 - Running...
+  Page  1 -> Job 7 - Running...
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Running.....
+  Page  6 -> Job 10 - Running.....
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Running.
+  Page 13 -> Job 5 - Running.
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 7 - Sleeping
+  Page 18 -> Job 7 - Sleeping
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 14                *
+***********************************************************
+  Page  0 -> Job 7 - Running..
+  Page  1 -> Job 7 - Running..
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Running....
+  Page  6 -> Job 10 - Running....
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 7 - Sleeping
+  Page 18 -> Job 7 - Sleeping
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 15                *
+***********************************************************
+  Page  0 -> Job 7 - Running.
+  Page  1 -> Job 7 - Running.
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Running...
+  Page  6 -> Job 10 - Running...
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 7 - Sleeping
+  Page 18 -> Job 7 - Sleeping
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 16                *
+***********************************************************
+  Page  0 -> Job 7 - End
+  Page  1 -> Job 7 - End
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Running..
+  Page  6 -> Job 10 - Running..
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 7 - Sleeping
+  Page 18 -> Job 7 - Sleeping
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Deallocate Job 7, freeing 2 pages.
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Queued: requesting 4 pages for 4 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 17                *
+***********************************************************
+  Page  0 -> 
+  Page  1 -> 
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Running.
+  Page  6 -> Job 10 - Running.
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> 
+  Page 18 -> 
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Blocked: requesting 4 pages for 4 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 18                *
+***********************************************************
+  Page  0 -> 
+  Page  1 -> 
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Sleeping
+  Page  6 -> Job 10 - Sleeping
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> 
+  Page 18 -> 
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Blocked: requesting 4 pages for 4 seconds.
+  - Allocate Job 10 - Queued: requesting 2 pages for 11 seconds.
+  - Allocate Job 6 - Queued: requesting 3 pages for 6 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 19                *
+***********************************************************
+  Page  0 -> 
+  Page  1 -> 
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Sleeping
+  Page  6 -> Job 10 - Sleeping
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 10 - Running...........
+  Page 18 -> Job 10 - Running...........
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Blocked: requesting 4 pages for 4 seconds.
+  - Allocate Job 6 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 5 - Queued: requesting 2 pages for 10 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 20                *
+***********************************************************
+  Page  0 -> Job 5 - Running..........
+  Page  1 -> Job 5 - Running..........
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Sleeping
+  Page  6 -> Job 10 - Sleeping
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 10 - Running..........
+  Page 18 -> Job 10 - Running..........
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Blocked: requesting 4 pages for 4 seconds.
+  - Allocate Job 6 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Queued: requesting 3 pages for 12 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 21                *
+***********************************************************
+  Page  0 -> Job 5 - Running.........
+  Page  1 -> Job 5 - Running.........
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Sleeping
+  Page  6 -> Job 10 - Sleeping
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 10 - Running.........
+  Page 18 -> Job 10 - Running.........
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Blocked: requesting 4 pages for 4 seconds.
+  - Allocate Job 6 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 12 seconds.
+  - Allocate Job 12 - Queued: requesting 6 pages for 13 seconds.
+  - Allocate Job 8 - Queued: requesting 3 pages for 9 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 22                *
+***********************************************************
+  Page  0 -> Job 5 - Running........
+  Page  1 -> Job 5 - Running........
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Sleeping
+  Page  6 -> Job 10 - Sleeping
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 10 - Running........
+  Page 18 -> Job 10 - Running........
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Blocked: requesting 4 pages for 4 seconds.
+  - Allocate Job 6 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 12 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 13 seconds.
+  - Allocate Job 8 - Blocked: requesting 3 pages for 9 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 23                *
+***********************************************************
+  Page  0 -> Job 5 - Running.......
+  Page  1 -> Job 5 - Running.......
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Sleeping
+  Page  6 -> Job 10 - Sleeping
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 10 - Running.......
+  Page 18 -> Job 10 - Running.......
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Blocked: requesting 4 pages for 4 seconds.
+  - Allocate Job 6 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 12 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 13 seconds.
+  - Allocate Job 8 - Blocked: requesting 3 pages for 9 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 24                *
+***********************************************************
+  Page  0 -> Job 5 - Running......
+  Page  1 -> Job 5 - Running......
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Sleeping
+  Page  6 -> Job 10 - Sleeping
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 10 - Running......
+  Page 18 -> Job 10 - Running......
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Blocked: requesting 4 pages for 4 seconds.
+  - Allocate Job 6 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 12 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 13 seconds.
+  - Allocate Job 8 - Blocked: requesting 3 pages for 9 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 25                *
+***********************************************************
+  Page  0 -> Job 5 - Running.....
+  Page  1 -> Job 5 - Running.....
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Sleeping
+  Page  6 -> Job 10 - Sleeping
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 10 - Running.....
+  Page 18 -> Job 10 - Running.....
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Blocked: requesting 4 pages for 4 seconds.
+  - Allocate Job 6 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 12 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 13 seconds.
+  - Allocate Job 8 - Blocked: requesting 3 pages for 9 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 26                *
+***********************************************************
+  Page  0 -> Job 5 - Running....
+  Page  1 -> Job 5 - Running....
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Sleeping
+  Page  6 -> Job 10 - Sleeping
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 10 - Running....
+  Page 18 -> Job 10 - Running....
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Blocked: requesting 4 pages for 4 seconds.
+  - Allocate Job 6 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 12 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 13 seconds.
+  - Allocate Job 8 - Blocked: requesting 3 pages for 9 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 27                *
+***********************************************************
+  Page  0 -> Job 5 - Running...
+  Page  1 -> Job 5 - Running...
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Sleeping
+  Page  6 -> Job 10 - Sleeping
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 10 - Running...
+  Page 18 -> Job 10 - Running...
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Blocked: requesting 4 pages for 4 seconds.
+  - Allocate Job 6 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 12 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 13 seconds.
+  - Allocate Job 8 - Blocked: requesting 3 pages for 9 seconds.
+  - Allocate Job 9 - Queued: requesting 5 pages for 11 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 28                *
+***********************************************************
+  Page  0 -> Job 5 - Running..
+  Page  1 -> Job 5 - Running..
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Sleeping
+  Page  6 -> Job 10 - Sleeping
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 10 - Running..
+  Page 18 -> Job 10 - Running..
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Blocked: requesting 4 pages for 4 seconds.
+  - Allocate Job 6 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 12 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 13 seconds.
+  - Allocate Job 8 - Blocked: requesting 3 pages for 9 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 11 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 29                *
+***********************************************************
+  Page  0 -> Job 5 - Running.
+  Page  1 -> Job 5 - Running.
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Sleeping
+  Page  6 -> Job 10 - Sleeping
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 10 - Running.
+  Page 18 -> Job 10 - Running.
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Blocked: requesting 4 pages for 4 seconds.
+  - Allocate Job 6 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 12 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 13 seconds.
+  - Allocate Job 8 - Blocked: requesting 3 pages for 9 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 11 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 30                *
+***********************************************************
+  Page  0 -> Job 5 - Sleeping
+  Page  1 -> Job 5 - Sleeping
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> Job 10 - Sleeping
+  Page  6 -> Job 10 - Sleeping
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> Job 10 - End
+  Page 18 -> Job 10 - End
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Deallocate Job 10, freeing 2 pages.
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Blocked: requesting 4 pages for 4 seconds.
+  - Allocate Job 6 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 12 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 13 seconds.
+  - Allocate Job 8 - Blocked: requesting 3 pages for 9 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 11 seconds.
+
+***********************************************************
+*             MEMORY STATE AT TIMEPOINT 31                *
+***********************************************************
+  Page  0 -> Job 5 - Sleeping
+  Page  1 -> Job 5 - Sleeping
+  Page  2 -> Job 2 - Sleeping
+  Page  3 -> Job 2 - Sleeping
+  Page  4 -> Job 2 - Sleeping
+  Page  5 -> 
+  Page  6 -> 
+  Page  7 -> 
+  Page  8 -> 
+  Page  9 -> Job 4 - Sleeping
+  Page 10 -> Job 4 - Sleeping
+  Page 11 -> Job 4 - Sleeping
+  Page 12 -> Job 5 - Sleeping
+  Page 13 -> Job 5 - Sleeping
+  Page 14 -> Job 6 - Sleeping
+  Page 15 -> Job 6 - Sleeping
+  Page 16 -> Job 6 - Sleeping
+  Page 17 -> 
+  Page 18 -> 
+  Page 19 -> 
+***********************************************************
+Staged Commands:
+  - Allocate Job 8 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 5 seconds.
+  - Allocate Job 11 - Blocked: requesting 4 pages for 6 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 5 seconds.
+  - Allocate Job 2 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 4 seconds.
+  - Allocate Job 13 - Blocked: requesting 5 pages for 3 seconds.
+  - Allocate Job 9 - Blocked: requesting 4 pages for 4 seconds.
+  - Allocate Job 6 - Blocked: requesting 3 pages for 6 seconds.
+  - Allocate Job 4 - Blocked: requesting 3 pages for 12 seconds.
+  - Allocate Job 12 - Blocked: requesting 6 pages for 13 seconds.
+  - Allocate Job 8 - Blocked: requesting 3 pages for 9 seconds.
+  - Allocate Job 9 - Blocked: requesting 5 pages for 11 seconds.
+
+Nothing more to do...
+
