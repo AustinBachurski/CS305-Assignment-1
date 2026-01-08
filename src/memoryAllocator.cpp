@@ -20,9 +20,9 @@ std::size_t firstFit(std::span<Job const, 20> memory, uint8_t const requestedSiz
     std::size_t index{};
     uint8_t spanSize{};
 
-    for (auto const [i, page] : std::views::enumerate(memory))
+    for (auto const [i, job] : std::views::enumerate(memory))
     {
-        if (!page.jobID)    // At a free space.
+        if (!job.jobID)    // At a free space.
         {
             if (!spanSize)  // Not currently traversing free space.
             {

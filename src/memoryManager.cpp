@@ -36,21 +36,21 @@ void MemoryManager::displayMemoryState(uint8_t const currentTime)
     std::println("*             MEMORY STATE AT TIMEPOINT {:<2}                *", currentTime);
     std::println("***********************************************************");
 
-    for (auto const [i, page] : std::views::enumerate(memory))
+    for (auto const [i, job] : std::views::enumerate(memory))
     {
         std::print("  Page {:2} -> ", i);
 
-        if (!page.jobID)
+        if (!job.jobID)
         {
             std::println();
         }
-        else if (page.currentState == JobState::running)
+        else if (job.currentState == JobState::running)
         {
-            std::println("{}{}", page, std::string(page.runTime - currentTime, '.'));
+            std::println("{}{}", job, std::string(job.runTime - currentTime, '.'));
         }
         else
         {
-            std::println("{}", page);
+            std::println("{}", job);
         }
     }
 
@@ -61,23 +61,23 @@ void MemoryManager::displayMemoryState(uint8_t const currentTime)
 
 void MemoryManager::updateState(uint8_t const currentTime)
 {
-    for (auto& page : memory)
+    for (auto& job : memory)
     {
-        if (!page.jobID || page.currentState == JobState::sleeping)
+        if (!job.jobID || job.currentState == JobState::sleeping)
         {
             continue;
         }
 
-        if (page.currentState == JobState::running)
+        if (job.currentState == JobState::running)
         {
-            if (currentTime - page.startTime == page.runTime)
+            if (currentTime - job.startTime == job.runTime)
             {
-                page.currentState = page.endState;
+                job.currentState = job.endState;
             }
         }
-        else if (page.currentState == JobState::end)
+        else if (job.currentState == JobState::end)
         {
-            deallocate(page.jobID);
+            deallocate(job.jobID);
         }
     }
 }
@@ -85,11 +85,11 @@ void MemoryManager::updateState(uint8_t const currentTime)
 
 void MemoryManager::deallocate(uint8_t const jobNumber)
 {
-    for (auto& page : memory)
+    for (auto& job : memory)
     {
-        if (jobNumber == page.jobID)
+        if (jobNumber == job.jobID)
         {
-            page = {};
+            job = {};
         }
     }
 }
