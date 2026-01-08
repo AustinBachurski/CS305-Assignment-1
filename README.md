@@ -34,7 +34,10 @@
 
 ## Output
 
-When running with the included `run.sh` shell script, the program will be executed once for each memory allocation algorithm.  The output of each pass will be saved to it's own `.txt` file in the `output` directory.
+When running with the included `run.sh` shell script, the program will be executed once for each memory allocation algorithm.  The output of each pass will be saved to a `.txt` file in the `output` directory as shown below.
+- `First-Fit.txt`
+- `Best-Fit.txt`
+- `Worst-Fit.txt`
 
 # Answers
 
