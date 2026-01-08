@@ -129,6 +129,8 @@ void demo(std::function<std::size_t(std::span<Job const, 20>, uint8_t const)> al
 
         if (jobs.empty() || memory.allSleeping())
         {
+            memory.displayMemoryState(currentTime);
+            memory.displayStaged(currentTime, jobs);
             std::println("Nothing more to do...\n");
             return;
         }
