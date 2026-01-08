@@ -86,6 +86,11 @@ void MemoryManager::displayStaged(uint8_t const currentTime, std::deque<Job> con
         }
     }
 
+    for (auto const& job : blocked)
+    {
+        std::println("  - Allocate {}: requesting {} pages for {} seconds.", job, job.memorySize, job.runTime);
+    }
+
     for (auto const& job : jobs)
     {
         if (job.startTime <= currentTime || job.currentState == JobState::blocked)
@@ -141,9 +146,11 @@ void MemoryManager::performStagedActions(uint8_t const currentTime, std::deque<J
         }
     }
 
-    while (!jobs.empty()
-           && (jobs.front().startTime <= currentTime
-               || jobs.front().currentState == JobState::blocked))
+    // No difference in output using this method.
+    //std::erase_if(blocked, [this](auto const& job)
+    //              { return allocate(job) == AllocationResult::success; });
+
+    while (!jobs.empty() && jobs.front().startTime <= currentTime)
     {
         if (allocate(jobs.front()) == AllocationResult::success)
         {
@@ -152,7 +159,8 @@ void MemoryManager::performStagedActions(uint8_t const currentTime, std::deque<J
         else
         {
             jobs.front().currentState = JobState::blocked;
-            break;
+            blocked.push_back(jobs.front());
+            jobs.pop_front();
         }
     }
 }

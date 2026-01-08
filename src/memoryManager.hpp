@@ -7,6 +7,7 @@
 #include <deque>
 #include <functional>
 #include <span>
+#include <vector>
 
 
 class MemoryManager
@@ -32,6 +33,7 @@ public:
 private:
     AllocatorCallable allocatorCallable;
     std::array<Job, 20> memory{};
+    std::vector<Job> blocked;
     void deallocate(uint8_t const jobNumber);
 
 };
