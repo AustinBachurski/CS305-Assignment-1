@@ -37,13 +37,18 @@
 
 ## Output
 
-When running with the included `run.sh` shell script, the program will be executed once for each memory allocation algorithm.  The output of each pass will be saved to it's own `.txt` file in the `output` directory.
+When running with the included `run.sh` shell script, the program will be executed once for each memory allocation algorithm.  The output of each pass will be saved to a `.txt` file in the `output` directory as shown below.
+- `First-Fit.txt`
+- `Best-Fit.txt`
+- `Worst-Fit.txt`
+
+Remaining execution time for running jobs is described by the number of `.` characters following the job state.  For example, a running job with 3 seconds of execution left is represented by `Running...`.
+
+![Demo of running jobs.](screenshots/demo.png)
 
 # Answers
 
-The image below shows the output for each algorithm in a side-by-side comparison, algorithms are described at the bottom of the editor.  This was done using the skip method, where a job that could not be allocated was moved to a `Blocked` state and ignored.  This method showed the greatest differences in the algorithms given the table of inputs provided.  We see larger larger fragmentation blocks out of the Worst-Fit example, with more memory wasted overall.  First-Fit and Best-Fit show smaller blocks of internal fragmentation and better overall memory usage.  Interestingly, all 3 algorithms completet he same amount of jobs given the example input, but First-Fit and Best-Fit skip Job 11, where Worst-Fit skips job 7.  I'm not quite sure if this is all I'm supposed to do based on my attempt at interpreting the instructions, replacement is mentioned, but I'm unsure if we are expected to replace sleeping jobs or what exactly.  Also not sure what pages they would be replaced with, maybe we're supposed to split the 20 pages into smaller sections?  Honestly not sure based on the vagueness of the instructions as I'm reading them.  So far as a Windows vs Linux comparison, I would be curious to see how the Buddy Algorithm that Linux uses would compare to these three algorithms given the sample input.  A lot of what I'm reading talks about increased internal fragmentation due to the splitting of memory blocks, some sources state that it either works very well, or very poorly given different context.
+The image below shows the output for each algorithm in a side-by-side comparison, algorithms are described at the bottom of the editor.  This was done using the skip method, where a job that could not be allocated was moved to a `Blocked` state and ignored.  This method showed the greatest differences in the algorithms given the table of inputs provided.  We see larger fragmentation blocks out of the Worst-Fit example, with more memory wasted overall.  First-Fit and Best-Fit show smaller blocks of internal fragmentation and better overall memory usage.  Interestingly, all 3 algorithms completed he same amount of jobs given the example input, but First-Fit and Best-Fit skip Job 11, where Worst-Fit skips job 7.  I'm not quite sure if this is all I'm supposed to do based on my attempt at interpreting the instructions, replacement is mentioned, but I'm unsure if we are expected to replace sleeping jobs or what exactly.  Also not sure what pages they would be replaced with, maybe we're supposed to split the 20 pages into smaller sections?  Honestly not sure based on the vagueness of the instructions as I'm reading them.  So far as a Windows vs Linux comparison, I would be curious to see how the Buddy Algorithm that Linux uses would compare to these three algorithms given the sample input.  A lot of what I'm reading talks about increased internal fragmentation due to the splitting of memory blocks, some sources state that it either works very well, or very poorly given different context.
 
 ![Side-by-side Comparison.](screenshots/side-by-side.png)
-
-![Demo of running jobs.](screenshots/demo.png)
 
