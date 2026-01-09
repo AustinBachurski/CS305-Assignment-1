@@ -10,8 +10,15 @@ enum class JobState : uint8_t
     end,
     queued,
     running,
+    open,
     blocked,
     sleeping,
+};
+
+enum class JobType : uint8_t
+{
+    job,
+    file,
 };
 
 struct Job
@@ -22,6 +29,7 @@ struct Job
     uint8_t runTime{};
     JobState currentState{};
     JobState endState{};
+    JobType jobType{ JobType::job };
 };
 
 template<>
@@ -43,7 +51,14 @@ struct std::formatter<JobState>
                 return std::format_to(context.out(), "Queued");
 
             case JobState::running:
+            {
                 return std::format_to(context.out(), "Running");
+            }
+
+            case JobState::open:
+            {
+                return std::format_to(context.out(), "Open");
+            }
 
             case JobState::blocked:
                 return std::format_to(context.out(), "Blocked");
@@ -63,9 +78,16 @@ struct std::formatter<Job>
         return context.begin();
     }
 
-    auto format(Job const& page, std::format_context& context) const
+    auto format(Job const& job, std::format_context& context) const
     {
-        return std::format_to(context.out(), "Job {} - {}", page.jobID, page.currentState);
+        if (job.jobType == JobType::job)
+        {
+            return std::format_to(context.out(), "Job {} - {}", job.jobID, job.currentState);
+        }
+        else
+        {
+            return std::format_to(context.out(), "File {} - {}", job.jobID, job.currentState);
+        }
     }
 };
 
