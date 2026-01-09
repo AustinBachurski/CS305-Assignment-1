@@ -9,6 +9,7 @@
 #include <ranges>
 #include <set>
 
+// The methods in this file are described with comments in `memoryManager.hpp`
 
 MemoryManager::AllocationResult MemoryManager::allocate(Job const& job, uint8_t const currentTime)
 {

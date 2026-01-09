@@ -1,7 +1,7 @@
-void demo();
+void demo(); // Forward declaration for the `demo` function.
 
-int main()
+int main()   // Program entry point.
 {
-    demo();
+    demo();  // Call the demo function.
 }
 

@@ -13,9 +13,13 @@
 #include <string_view>
 
 
+// An annonymous namespace makes the functions within it inaccessible outside
+// of this translation unit.  Basically making free functions private.
 namespace
 {
 
+// Helper function that displays invalid input and exits the program.
+// This is called if an input file cannot be parsed correctly.
 [[noreturn]]
 void invalidInput(std::string_view const line)
 {
@@ -24,6 +28,7 @@ void invalidInput(std::string_view const line)
     std::exit(1);
 }
 
+// Helper function that parses a string to a number.
 uint8_t parseField(std::string_view const field, std::string_view const line)
 {
     uint8_t value{};
@@ -36,6 +41,8 @@ uint8_t parseField(std::string_view const field, std::string_view const line)
     return value;
 }
 
+
+// Helper function to create a Job object as an application.
 Job makeJob(std::string_view const line)
 {
     auto fields = line | std::views::split(',')
@@ -76,6 +83,7 @@ Job makeJob(std::string_view const line)
     return job;
 }
 
+// Helper function that creates a queue of Job objects by reading data from an input file.
 std::deque<Job> getJobsFromFile(std::filesystem::path filePath)
 {
     std::deque<Job> jobs;
@@ -106,6 +114,7 @@ std::deque<Job> getJobsFromFile(std::filesystem::path filePath)
     return jobs;
 }
 
+// Helper function to create a Job object as a file.
 Job makeFile(std::string_view const line)
 {
     auto fields = line | std::views::split(',')
@@ -138,6 +147,7 @@ Job makeFile(std::string_view const line)
     return job;
 }
 
+// Helper function to read the pseudo-file data from an input file.
 void getFilesFromFile(std::deque<Job>& jobs, std::filesystem::path filePath)
 {
     if (!std::filesystem::exists(filePath))
@@ -166,6 +176,8 @@ void getFilesFromFile(std::deque<Job>& jobs, std::filesystem::path filePath)
 
 }  // Anonymous Namespace
 
+
+// Function that demonstrates memory management and operating system functionality.
 void demo()
 {
     MemoryManager memory;
