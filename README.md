@@ -1,4 +1,7 @@
 # Computer Science 305 via Study.com - Assignment 1: Solving Memory Management Problems
+
+#### IMPORTANT: *Please see the `Assignment-2` branch for Assignment 2: Building Simple Operating System Functionality.*
+
 > Assignment Prompt answers may be found in the [Answers](#Answers) section.
 
 ## Required Tooling
