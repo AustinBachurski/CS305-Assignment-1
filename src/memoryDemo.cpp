@@ -6,11 +6,9 @@
 #include <cstdlib>
 #include <deque>
 #include <filesystem>
-#include <functional>
 #include <fstream>
 #include <print>
 #include <ranges>
-#include <span>
 #include <string>
 #include <string_view>
 
@@ -78,14 +76,13 @@ Job makeJob(std::string_view const line)
     return job;
 }
 
-
 std::deque<Job> getJobsFromFile(std::filesystem::path filePath)
 {
     std::deque<Job> jobs;
 
     if (!std::filesystem::exists(filePath))
     {
-        std::println("Input file not found!");
+        std::println("Input file not found: {}!", filePath.string());
         std::exit(1);
     }
 
@@ -93,7 +90,7 @@ std::deque<Job> getJobsFromFile(std::filesystem::path filePath)
 
     if (!file.is_open())
     {
-        std::println("Failed to open input file!");
+        std::println("Failed to open input file: {}!", filePath.string());
         std::exit(1);
     }
 
@@ -109,13 +106,70 @@ std::deque<Job> getJobsFromFile(std::filesystem::path filePath)
     return jobs;
 }
 
-}  // Annonymous Namespace
-
-void demo(std::function<std::size_t(std::span<Job const, 20>, uint8_t const)> allocator)
+Job makeFile(std::string_view const line)
 {
-    MemoryManager memory(allocator);
+    auto fields = line | std::views::split(',')
+                       | std::views::transform([](auto&& split_view)
+                             { return std::string_view{ split_view }; });
 
-    std::deque<Job> jobs = getJobsFromFile("data/inputData.csv");
+    Job job;
+
+    auto fieldsIter{ fields.begin() };
+
+    auto next{ [&fieldsIter, &fields, line]()
+    {
+        if (fieldsIter == fields.end()) { invalidInput(line); }
+        return *fieldsIter++;
+    }};
+
+    job.jobID = parseField(next(), line);
+    job.startTime = parseField(next(), line);
+    job.runTime = parseField(next(), line);
+
+    // Calculate file size; since the instructions define the size to be equal
+    // to 1, just sum the number of blocks.
+    while (++fieldsIter != fields.end())
+    {
+        ++job.memorySize;
+    }
+
+    return job;
+}
+
+void getFilesFromFile(std::deque<Job>& jobs, std::filesystem::path filePath)
+{
+    if (!std::filesystem::exists(filePath))
+    {
+        std::println("Input file not found: {}!", filePath.string());
+        std::exit(1);
+    }
+
+    std::ifstream file{ filePath };
+
+    if (!file.is_open())
+    {
+        std::println("Failed to open input file: {}!", filePath.string());
+        std::exit(1);
+    }
+
+    std::string line;
+
+    std::getline(file, line);  // Skip csv header.
+
+    while (std::getline(file, line))
+    {
+        jobs.push_back(makeFile(line));
+    }
+}
+
+}  // Anonymous Namespace
+
+void demo()
+{
+    MemoryManager memory;
+
+    std::deque<Job> jobs = getJobsFromFile("data/inputJobs.csv");
+    getFilesFromFile(jobs, "data/inputFiles.csv");
 
     uint8_t currentTime = 0;
 
@@ -127,7 +181,7 @@ void demo(std::function<std::size_t(std::span<Job const, 20>, uint8_t const)> al
         memory.displayStaged(currentTime, jobs);
         memory.performStagedActions(currentTime, jobs);
 
-        if (jobs.empty() || memory.allSleeping())
+        if (jobs.empty() && memory.allSleeping())
         {
             memory.displayMemoryState(currentTime);
             memory.displayStaged(currentTime, jobs);
