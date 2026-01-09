@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 4.0)
 
-add_executable(assignment1)
+add_executable(assignment2)
 
 target_sources(assignment1 PRIVATE
     memoryDemo.cpp
