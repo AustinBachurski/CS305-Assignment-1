@@ -10,7 +10,7 @@
 #include <set>
 
 
-MemoryManager::AllocationResult MemoryManager::allocate(Job const& job)
+MemoryManager::AllocationResult MemoryManager::allocate(Job const& job, uint8_t const currentTime)
 {
     try
     {
@@ -19,7 +19,16 @@ MemoryManager::AllocationResult MemoryManager::allocate(Job const& job)
         for (auto const i : std::views::iota(index, index + job.memorySize))
         {
             memory[i] = job;
-            memory[i].currentState = JobState::running;
+            memory[i].startTime = currentTime;
+
+            if (job.jobType == JobType::job)
+            {
+                memory[i].currentState = JobState::running;
+            }
+            else
+            {
+                memory[i].currentState = JobState::open;
+            }
         }
 
         return AllocationResult::success;
@@ -124,7 +133,7 @@ void MemoryManager::updateState(uint8_t const currentTime)
 
 MemoryManager::CullingResult MemoryManager::cullSleepingJobsFor(uint8_t pagesToFree)
 {
-    std::println("    **Insufficient memory for allocation**");
+    std::println("    INSUFFICIENT MEMORY FOR ALLOCATION");
     std::set<uint8_t> ids;
     uint8_t cumulativeSpace{};
 
@@ -134,7 +143,7 @@ MemoryManager::CullingResult MemoryManager::cullSleepingJobsFor(uint8_t pagesToF
         {
             if (job.memorySize >= pagesToFree)
             {
-                std::println("\tCull sleeping job {} for {} pages.", job.jobID, job.memorySize);
+                std::println("    - Cull sleeping job {} for {} pages.", job.jobID, job.memorySize);
                 deallocate(job.jobID);
                 return MemoryManager::CullingResult::success;
             }
@@ -145,7 +154,7 @@ MemoryManager::CullingResult MemoryManager::cullSleepingJobsFor(uint8_t pagesToF
 
                 if (cumulativeSpace >= pagesToFree)
                 {
-                    std::println("\tCull sleeping jobs {} for {} pages.", ids, cumulativeSpace);
+                    std::println("    - Cull sleeping jobs {} for {} pages.", ids, cumulativeSpace);
 
                     for (auto const id : ids)
                     {
@@ -158,7 +167,7 @@ MemoryManager::CullingResult MemoryManager::cullSleepingJobsFor(uint8_t pagesToF
         }
     }
 
-    std::println("\tCulling failed, blocking job.");
+    std::println("    - Insufficient sleeping processes, blocking job.");
     return MemoryManager::CullingResult::failure;
 }
 
@@ -185,7 +194,7 @@ void MemoryManager::performStagedActions(uint8_t const currentTime, std::deque<J
 
     while (!jobs.empty() && jobs.front().startTime <= currentTime)
     {
-        if (allocate(jobs.front()) == AllocationResult::success)
+        if (allocate(jobs.front(), currentTime) == AllocationResult::success)
         {
             jobs.pop_front();
         }

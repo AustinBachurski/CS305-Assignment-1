@@ -24,7 +24,7 @@ public:
     };
 
     [[nodiscard("Allocation may fail.")]]
-    AllocationResult allocate(Job const& job);
+    AllocationResult allocate(Job const& job, uint8_t const currentTime);
     bool allSleeping();
     void displayMemoryState(uint8_t const currentTime);
     void displayStaged(uint8_t const currentTime, std::deque<Job> const& jobs);
