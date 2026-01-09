@@ -128,11 +128,13 @@ Job makeFile(std::string_view const line)
 
     // Calculate file size; since the instructions define the size to be equal
     // to 1, just sum the number of blocks.
-    while (++fieldsIter != fields.end())
+    while (fieldsIter++ != fields.end())
     {
         ++job.memorySize;
     }
 
+    job.jobType = JobType::file;
+    job.currentState = JobState::queued;
     return job;
 }
 

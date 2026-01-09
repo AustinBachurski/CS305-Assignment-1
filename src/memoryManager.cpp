@@ -10,15 +10,11 @@
 #include <set>
 
 
-MemoryManager::MemoryManager(AllocatorCallable allocator)
-: allocatorCallable{ allocator }
-{ }
-
 MemoryManager::AllocationResult MemoryManager::allocate(Job const& job)
 {
     try
     {
-        std::size_t index{ allocatorCallable(memory, job.memorySize) };
+        std::size_t index{ firstFitAllocator(job.memorySize) };
 
         for (auto const i : std::views::iota(index, index + job.memorySize))
         {
@@ -48,6 +44,7 @@ bool MemoryManager::allSleeping()
 
 void MemoryManager::displayMemoryState(uint8_t const currentTime)
 {
+    std::println();
     std::println("***********************************************************");
     std::println("*             MEMORY STATE AT TIMEPOINT {:<2}                *", currentTime);
     std::println("***********************************************************");
@@ -60,7 +57,7 @@ void MemoryManager::displayMemoryState(uint8_t const currentTime)
         {
             std::println();
         }
-        else if (job.currentState == JobState::running)
+        else if (job.currentState == JobState::running || job.currentState == JobState::open)
         {
             std::println("{}{}", job, std::string(static_cast<uint8_t>((job.startTime + job.runTime) - currentTime), '.'));
         }
@@ -82,13 +79,15 @@ void MemoryManager::displayStaged(uint8_t const currentTime, std::deque<Job> con
     {
         if (job.jobID && job.currentState == JobState::end && seen.insert(job.jobID).second)
         {
-            std::println("  - Deallocate Job {}, freeing {} pages.", job.jobID, job.memorySize);
+            if (job.jobType == JobType::job)
+            {
+                std::println("  - Deallocate Job {}, freeing {} pages.", job.jobID, job.memorySize);
+            }
+            else
+            {
+                std::println("  - Deallocate File {}, freeing {} pages.", job.jobID, job.memorySize);
+            }
         }
-    }
-
-    for (auto const& job : blocked)
-    {
-        std::println("  - Allocate {}: requesting {} pages for {} seconds.", job, job.memorySize, job.runTime);
     }
 
     for (auto const& job : jobs)
@@ -98,7 +97,6 @@ void MemoryManager::displayStaged(uint8_t const currentTime, std::deque<Job> con
             std::println("  - Allocate {}: requesting {} pages for {} seconds.", job, job.memorySize, job.runTime);
         }
     }
-    std::println();
 }
 
 void MemoryManager::updateState(uint8_t const currentTime)
@@ -110,7 +108,7 @@ void MemoryManager::updateState(uint8_t const currentTime)
             continue;
         }
 
-        if (job.currentState == JobState::running)
+        if (job.currentState == JobState::running || job.currentState == JobState::open)
         {
             if (currentTime - job.startTime == job.runTime)
             {
@@ -124,6 +122,45 @@ void MemoryManager::updateState(uint8_t const currentTime)
     }
 }
 
+MemoryManager::CullingResult MemoryManager::cullSleepingJobsFor(uint8_t pagesToFree)
+{
+    std::println("    **Insufficient memory for allocation**");
+    std::set<uint8_t> ids;
+    uint8_t cumulativeSpace{};
+
+    for (auto const& job : memory)
+    {
+        if (job.jobID && job.currentState == JobState::sleeping)
+        {
+            if (job.memorySize >= pagesToFree)
+            {
+                std::println("\tCull sleeping job {} for {} pages.", job.jobID, job.memorySize);
+                deallocate(job.jobID);
+                return MemoryManager::CullingResult::success;
+            }
+
+            if (ids.insert(job.jobID).second)
+            {
+                cumulativeSpace += job.memorySize;
+
+                if (cumulativeSpace >= pagesToFree)
+                {
+                    std::println("\tCull sleeping jobs {} for {} pages.", ids, cumulativeSpace);
+
+                    for (auto const id : ids)
+                    {
+                        deallocate(id);
+                    }
+
+                    return MemoryManager::CullingResult::success;
+                }
+            }
+        }
+    }
+
+    std::println("\tCulling failed, blocking job.");
+    return MemoryManager::CullingResult::failure;
+}
 
 void MemoryManager::deallocate(uint8_t const jobNumber)
 {
@@ -146,22 +183,52 @@ void MemoryManager::performStagedActions(uint8_t const currentTime, std::deque<J
         }
     }
 
-    // No difference in output using this method.
-    //std::erase_if(blocked, [this](auto const& job)
-    //              { return allocate(job) == AllocationResult::success; });
-
     while (!jobs.empty() && jobs.front().startTime <= currentTime)
     {
         if (allocate(jobs.front()) == AllocationResult::success)
         {
             jobs.pop_front();
         }
+        else if (cullSleepingJobsFor(jobs.front().memorySize) == CullingResult::success)
+        {
+            // If culling succeeded, memory is now available; try again.
+            continue;
+        }
         else
         {
             jobs.front().currentState = JobState::blocked;
-            blocked.push_back(jobs.front());
-            jobs.pop_front();
+            break;
         }
     }
+}
+
+std::size_t MemoryManager::firstFitAllocator(uint8_t const requestedSize)
+{
+    std::size_t index{};
+    uint8_t spanSize{};
+
+    for (auto const [i, job] : std::views::enumerate(memory))
+    {
+        if (!job.jobID)    // At a free space.
+        {
+            if (!spanSize)  // Not currently traversing free space.
+            {
+                index = static_cast<std::size_t>(i);
+            }
+
+            ++spanSize;
+
+            if (requestedSize == spanSize)
+            {
+                return index;
+            }
+        }
+        else
+        {
+            spanSize = 0;
+        }
+    }
+
+    throw std::bad_alloc();
 }
 

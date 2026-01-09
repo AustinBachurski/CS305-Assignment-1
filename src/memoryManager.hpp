@@ -5,24 +5,25 @@
 
 #include <cstdint>
 #include <deque>
-#include <functional>
-#include <span>
-#include <vector>
+#include <unordered_map>
 
 
 class MemoryManager
 {
 public:
-    using AllocatorCallable = std::function<std::size_t(std::span<Job const, 20>, uint8_t const)>;
-    explicit MemoryManager(AllocatorCallable allocator);
-
     enum class AllocationResult : uint8_t
     {
         success,
         failure,
     };
 
-    [[nodiscard("Allocation may throw.")]]
+    enum class CullingResult : uint8_t
+    {
+        success,
+        failure,
+    };
+
+    [[nodiscard("Allocation may fail.")]]
     AllocationResult allocate(Job const& job);
     bool allSleeping();
     void displayMemoryState(uint8_t const currentTime);
@@ -31,10 +32,13 @@ public:
     void performStagedActions(uint8_t const currentTime, std::deque<Job>& jobs);
 
 private:
-    AllocatorCallable allocatorCallable;
     std::array<Job, 20> memory{};
-    std::vector<Job> blocked;
+    
+    [[nodiscard("Culling may fail.")]]
+    CullingResult cullSleepingJobsFor(uint8_t pagesToFree);
     void deallocate(uint8_t const jobNumber);
+    std::unordered_map<uint8_t, uint8_t> getSleepingJobs();
+    std::size_t firstFitAllocator(uint8_t const requestedSize);
 
 };
 

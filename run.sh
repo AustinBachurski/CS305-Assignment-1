@@ -9,10 +9,9 @@ fi
 cmake --build build
 
 # Run project for each algorithm, outputting to file.
-./build/bin/assignment1 --First-Fit > output/First-Fit.txt
-./build/bin/assignment1 --Best-Fit > output/Best-Fit.txt
-./build/bin/assignment1 --Worst-Fit > output/Worst-Fit.txt
+#./build/bin/assignment2 > output/Program-Output.txt
+./build/bin/assignment2
 
 # Status code, info dump, and exit.
-echo "Program exited with code $?.  Output written to 'output' directory."
+#echo "Program exited with code $?.  Output written to 'output' directory."
 
